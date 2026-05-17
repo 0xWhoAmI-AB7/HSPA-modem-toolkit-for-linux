@@ -20,7 +20,7 @@ A lightweight, automated, and interactive terminal utility that breathes new lif
 
 ## ⚙️ Core Prerequisites
 
-Before launching the toolkit, make sure your Linux system has the foundational cellular wrappers and audio utilities installed:
+Before launching the toolkit, make sure your Linux system has tiohe foundatnal cellular wrappers and audio utilities installed:
 
 ```bash
 sudo apt update
@@ -33,10 +33,10 @@ Get the tool up and running on your local machine instantly:
 
 Bash
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/hspa-modem-toolkit.git](https://github.com/YOUR_USERNAME/hspa-modem-toolkit.git)
+git clone https://github.com/0xWhoAmI-AB7/HSPA-modem-toolkit-for-linux.git
 
 # Move into the workspace
-cd hspa-modem-toolkit
+cd HSPA-modem-toolkit
 
 # Make the wrapper executable
 chmod +x modem_tools.sh

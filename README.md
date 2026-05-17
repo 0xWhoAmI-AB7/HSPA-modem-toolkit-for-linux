@@ -25,3 +25,55 @@ Before launching the toolkit, make sure your Linux system has the foundational c
 ```bash
 sudo apt update
 sudo apt install modemmanager usb-modeswitch sox libsox-fmt-all -y
+
+
+🚀 Quick Start Guide
+1. Clone & Initialize
+Get the tool up and running on your local machine instantly:
+
+Bash
+# Clone the repository
+git clone [https://github.com/YOUR_USERNAME/hspa-modem-toolkit.git](https://github.com/YOUR_USERNAME/hspa-modem-toolkit.git)
+
+# Move into the workspace
+cd hspa-modem-toolkit
+
+# Make the wrapper executable
+chmod +x modem_tools.sh
+
+# Launch the interactive system console
+./modem_tools.sh
+⚠️ Administrative Note: Because mmcli requires low-level kernel interaction to communicate with raw serial components, the script will request your sudo elevation password to access hardware lanes.
+
+2. Install Globally (Optional)
+To use the tool from any terminal directory at any time without pointing to this folder, establish it as a system binary:
+
+Bash
+sudo cp modem_tools.sh /usr/local/bin/modem_tools
+sudo chmod +x /usr/local/bin/modem_tools
+Now simply type:
+
+Bash
+modem_tools
+🛠️ Diagnostics & Tweaks
+Audio Stream Verification
+If a voice call establishes perfectly but you experience silence, your specific hardware variant or network provider might have the internal audio lines flipped.
+
+If this happens, open modem_tools.sh and locate lines 77 and 80. Simply swap the tracking entries:
+
+Change /dev/ttyUSB2 to /dev/ttyUSB1 for the listener pipeline.
+
+Change /dev/ttyUSB1 to /dev/ttyUSB2 for the microphone transmission loop.
+
+🤝 Contributing
+Got a patch for a specific brand of USB dongles? Found a way to expand USSD balance checks? Contributions are highly encouraged!
+
+Fork the Project.
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature).
+
+Commit your changes (git commit -m 'Add some AmazingFeature').
+
+Push to the Branch (git push origin feature/AmazingFeature).
+
+Open a Pull Request
